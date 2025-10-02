@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #00ff88;
+  font-family: 'Press Start 2P', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: 
+    linear-gradient(#222 1px, transparent 1px),
+    linear-gradient(90deg, #222 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: rotate(5deg);
+  z-index: 0;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid #00ffcc;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 0 20px #00ffcc;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+.headline{
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    
+}
+
+.guess{
+
+  width: 80px;
+  height: 80px;
+  margin-top: -45px;
+  margin-left: 220px;
+  background-color: #00ff88;
+  color: #222;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  
+
+}
+
+
+.quote{
+    font-size: 10px;
+    position: absolute ;
+    top: 8px;
+    left: 350px;
+    padding: 8px;
+    
+}
+
+
+.line{
+    width: 500px;
+    background-color: #00ff88;
+    height: 4px;
+    margin-left:10px;
+    margin-top: 40px;
+}
+
+.message{
+
+    padding: 30px;
+    margin-left: 230px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.btn{
+
+    position:absolute ;
+    top: 5px;
+    left: 20px;
+    font-size: 14px;
+    color: #00ff88;
+    background-color: black;
+    border-radius:8px;
+    padding: 6px;
+    box-shadow: #00ff88;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.check{
+    
+    margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #00ff88;
+    background-color: black;
+    border-radius:8px;
+    padding: 6px;
+    box-shadow: #00ff88;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+
+.inp{
+  position: absolute;
+     top: 300px;
+    left: 30px;
+    width: 80px;
+    padding: 15px;
+    border-radius: 10px;
+ 
+
+  color: #00ff88;
+  background-color: #222;
+  border: 1px solid #222;
+
+
+}
+
+.score{
+  margin-left: 20px;
+  font-size: smaller;
+}
+
+.highs{
+  margin-left: 20px;
+  font-size: smaller;
+}
+
+/* 📱 الموبايل (أقل من 600px) */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 95%;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .headline {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .quote {
+    position: relative;
+    font-size: 9px;
+    text-align: center;
+    margin: 5px auto 10px auto;
+    display: block;
+  }
+
+  .line {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .guess {
+    margin: 10px auto;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .message {
+    margin: 15px auto;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+  }
+
+  .check {
+    margin: 20px auto;
+    font-size: 12px;
+    display: block;
+  }
+
+  .inp {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 80%;
+    max-width: 200px;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .score,
+  .highs {
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+  }
+}
+
+
+/* 📲 التابلت (من 600px لحد 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    width: 85%;
+    padding: 20px;
+  }
+
+  .headline {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .quote {
+    left: 0;
+    text-align: center;
+    position: relative;
+    margin: 10px auto;
+    font-size: 10px;
+  }
+
+  .guess {
+    margin: 15px auto;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .message {
+    margin: 15px auto;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .inp {
+    top: auto;
+    left: auto;
+    position: relative;
+    width: 150px;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .check {
+    margin: 25px auto;
+    display: block;
+  }
+
+  .score,
+  .highs {
+    text-align: center;
+    margin: 10px auto;
+  }
+}
